@@ -81,6 +81,7 @@ export HADOOP_HOME=/opt/hadoop
 export PATH=\$PATH:\$JAVA_HOME/bin:\$HADOOP_HOME/bin:\$HADOOP_HOME/sbin
 EOF
 
+. /home/hadoop/.bashrc
 
 # Notificar al usuario sobre la necesidad de cambiar a 'hadoop' para verificar la instalación
 echo "Instalación completada. Por favor, cambie al usuario 'hadoop' (su hadoop) y ejecute '. ~/.bashrc' para actualizar las variables de entorno."
