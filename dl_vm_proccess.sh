@@ -10,11 +10,16 @@ fi
 if ! id "hadoop" &>/dev/null; then
     useradd -m hadoop
     echo "Usuario 'hadoop' creado."
+
+    # Añadir configuración del prompt al .bashrc del usuario 'hadoop'
+    echo "export PS1='\u@\h:\w\$ '" >> /home/hadoop/.bashrc
+
     echo "Por favor, establezca la contraseña para el usuario 'hadoop':"
     passwd hadoop
 else
     echo "El usuario 'hadoop' ya existe."
 fi
+
 
 # Crear directorio de trabajo en /opt/hadoop
 mkdir -p /opt/hadoop
