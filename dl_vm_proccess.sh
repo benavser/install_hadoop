@@ -1,5 +1,16 @@
 #!/bin/bash
 
+
+# Script para instalar Hadoop
+#  - Descarga Hadoop 3.4.0
+#  - Descarga OpenJDK 11
+#  - Configura las variables de entorno para el usuario 'hadoop'
+#  - Notifica al usuario sobre la necesidad de cambiar al usuario 'hadoop' para verificar la instalación
+
+# Nota: Este script debe ser ejecutado como root y se asume que el sistema operativo es Ubuntu
+
+
+
 # Verificar si el script se está ejecutando como root
 if [ "$(id -u)" -ne 0 ]; then
     echo "Este script debe ser ejecutado como root" >&2
